@@ -11,8 +11,6 @@ This project focuses on predicting the next product a customer is likely to buy 
    - [Inference](#inference)
 4. [Configuration](#configuration)
    - [config.conf](#configconf)
-5. [Contributing](#contributing)
-6. [License](#license)
 
 ## Introduction
 
