@@ -35,8 +35,9 @@ The project is organized into the following structure:
 
 - `src/`
   - `trainer.py`: Script for training the neural network model.
-  - `inference.py`: Script for making predictions using the trained model.
+  - `inference.py`: Module for making predictions using the trained model.
   - `config.conf`: Configuration file for specifying paths, model parameters, and training settings.
+- `wrapper.py`: Script for making predictions using the trained model.
 
 ## Usage
 
@@ -50,10 +51,28 @@ python trainer.py
 
 ### Inference
 
-To make predictions using the trained model, run the `inference.py` script. The script loads the trained model and tokenizer specified in the configuration.
+To make predictions using the trained model, run the `wrapper.py` script. The script loads the trained model and tokenizer specified in the configuration.
 
 ```bash
-python inference.py
+python wrapper.py
+```
+
+Or import the module
+
+```python
+from src.inference import Inference
+# Create an instance of Inference
+inference = Inference()
+
+# Load the tokenizer and model
+inference.load_tokenizer()
+inference.load_model()
+
+# Example of predicting the next item for a new items sequence
+new_sequence = ['jbl flip 5', 'playstation 5', 'samsung galaxy s21', 'hp wireless mouse', 'acer predator helios']
+predicted_product = inference.predict_next_item(new_sequence)
+
+print(f"Predicted next item: {predicted_product}")
 ```
 
 ### Configuration
