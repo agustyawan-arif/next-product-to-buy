@@ -5,11 +5,12 @@ This project focuses on predicting the next product a customer is likely to buy 
 ## Table of Contents
 
 1. [Introduction](#introduction)
-2. [Project Structure](#project-structure)
-3. [Usage](#usage)
+2. [Training Results](#training-results)
+3. [Project Structure](#project-structure)
+4. [Usage](#usage)
    - [Trainer](#trainer)
    - [Inference](#inference)
-4. [Configuration](#configuration)
+5. [Configuration](#configuration)
    - [config.conf](#configconf)
 
 ## Introduction
@@ -57,17 +58,11 @@ The model was trained with the results are summarized below:
 
 ### Training Metrics
 
-| Metric       | Value  |
-| ------------ | ------ |
-| Accuracy     | 0.8    |
-| Epoch        | 199    |
-| F1-Score     | 0.7991 |
-| Loss         | 0.04277|
-| Precision    | 0.8087 |
-| Recall       | 0.8    |
+| Created          | Runtime | End Time          | Updated           | Accuracy | Epoch | F1-Score | Loss   | Precision | Recall |
+| ---------------- | ------- | ----------------- | ----------------- | -------- | ----- | -------- | ------ | --------- | ------ |
+| Dec 24 '23 09:50 | 36s     | Dec 24 '23 09:50 | Dec 24 '23 09:50 | 0.8      | 199   | 0.7991   | 0.04277 | 0.8087    | 0.8    |
 
-The plot above illustrates the training loss and accuracy over epochs. The table presents key metrics achieved during the training process.
-
+The plot above illustrates the training loss over epochs. The table presents key metrics achieved during the training process.
 
 ## Project Structure
 
