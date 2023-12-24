@@ -2,6 +2,8 @@
 
 This project focuses on predicting the next product a customer is likely to buy based on their purchase history using a neural network.
 
+![Simulation](assets/simulation_preview.gif)
+
 ## Table of Contents
 
 1. [Introduction](#introduction)
