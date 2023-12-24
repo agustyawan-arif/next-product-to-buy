@@ -23,6 +23,21 @@ Welcome to the Next Product to Buy project! This project leverages neural networ
 - **Configuration:** Easily customizable through the `config.conf` file, enabling adjustments to paths, model parameters, and training settings.
 - **Metrics and Logging:** Utilizes Weights & Biases (W&B) for tracking and logging metrics during model training.
 
+### Limitations
+
+- **Supported Products:** The model currently supports predictions for nine specific products:
+  1. Samsung Galaxy S21
+  2. HP Wireless Mouse
+  3. Dell XPS 13
+  4. JBL Flip 5
+  5. Nintendo Switch
+  6. Sony Noise-Cancelling Headphones
+  7. Acer Predator Helios
+  8. Playstation 5
+  9. Xiaomi Mi 11
+
+Please note that the model is trained on data specific to these products, and predictions for other products may not yield accurate results.
+
 This project serves as a powerful tool for businesses looking to enhance their understanding of customer behaviors and improve recommendation systems. Whether you are exploring machine learning or seeking predictive analytics for your e-commerce platform, Next Product to Buy provides a foundation for building intelligent recommendation systems.
 
 Feel free to explore the project structure, try out the trainer and inference scripts, and customize the configuration to suit your specific use case. We welcome contributions, feedback, and collaboration to further enhance the capabilities of this predictive modeling project.
