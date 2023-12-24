@@ -111,6 +111,9 @@ predicted_product = inference.predict_next_item(new_sequence)
 
 print(f"Predicted next item: {predicted_product}")
 ```
+### API & Simulation
+
+For API and Simulation could be read at [Wiki's repo](https://github.com/agustyawan-arif/next-product-to-buy/wiki/7.-How-to-Use#run-api)
 
 ### Configuration
 
