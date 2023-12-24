@@ -44,6 +44,31 @@ Feel free to explore the project structure, try out the trainer and inference sc
 
 Happy predicting!
 
+## Training Results
+
+The model was trained with the results are summarized below:
+
+- **Created:** Dec 24 '23 09:50
+- **Runtime:** 36s
+- **End Time:** Dec 24 '23 09:50
+- **Updated:** Dec 24 '23 09:50
+
+![Training Loss](assets/training_plot.png)
+
+### Training Metrics
+
+| Metric       | Value  |
+| ------------ | ------ |
+| Accuracy     | 0.8    |
+| Epoch        | 199    |
+| F1-Score     | 0.7991 |
+| Loss         | 0.04277|
+| Precision    | 0.8087 |
+| Recall       | 0.8    |
+
+The plot above illustrates the training loss and accuracy over epochs. The table presents key metrics achieved during the training process.
+
+
 ## Project Structure
 
 The project is organized into the following structure:
