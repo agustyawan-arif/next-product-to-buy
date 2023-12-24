@@ -2,7 +2,7 @@
 
 This project focuses on predicting the next product a customer is likely to buy based on their purchase history using a neural network.
 
-https://github.com/agustyawan-arif/next-product-to-buy/assets/82918938/ca4bd157-d8e0-4f99-8cc3-2eaa1bce1ec6
+![Simulation](assets/simulation_preview.gif)
 
 ## Table of Contents
 
