@@ -1,7 +1,11 @@
+import os
+import sys
 import json
 from tensorflow.keras.models import load_model
 from keras.preprocessing.sequence import pad_sequences
 from tensorflow.keras.preprocessing.text import tokenizer_from_json
+
+path_this = os.path.dirname(os.path.abspath(__file__))
 
 class Inference:
     def __init__(self, tokenizer_path='models/tokenizer_config.json', model_path='models/model.keras'):
@@ -28,7 +32,7 @@ class Inference:
         Returns:
             None
         """
-        with open(self.tokenizer_path, 'r', encoding='utf-8') as f:
+        with open(os.path.join(path_this, self.tokenizer_path), 'r', encoding='utf-8') as f:
             loaded_tokenizer_config = json.load(f)
         self.loaded_tokenizer = tokenizer_from_json(loaded_tokenizer_config)
 
@@ -44,7 +48,7 @@ class Inference:
         Returns:
             None
         """
-        self.loaded_model = load_model(self.model_path)
+        self.loaded_model = load_model(os.path.join(path_this, self.model_path))
     
     def map_items(self):
         """
