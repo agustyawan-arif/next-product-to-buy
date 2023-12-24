@@ -5,11 +5,12 @@ This project focuses on predicting the next product a customer is likely to buy 
 ## Table of Contents
 
 1. [Introduction](#introduction)
-2. [Project Structure](#project-structure)
-3. [Usage](#usage)
+2. [Training Results](#training-results)
+3. [Project Structure](#project-structure)
+4. [Usage](#usage)
    - [Trainer](#trainer)
    - [Inference](#inference)
-4. [Configuration](#configuration)
+5. [Configuration](#configuration)
    - [config.conf](#configconf)
 
 ## Introduction
@@ -43,6 +44,25 @@ This project serves as a powerful tool for businesses looking to enhance their u
 Feel free to explore the project structure, try out the trainer and inference scripts, and customize the configuration to suit your specific use case. We welcome contributions, feedback, and collaboration to further enhance the capabilities of this predictive modeling project.
 
 Happy predicting!
+
+## Training Results
+
+The model was trained with the results are summarized below:
+
+- **Created:** Dec 24 '23 09:50
+- **Runtime:** 36s
+- **End Time:** Dec 24 '23 09:50
+- **Updated:** Dec 24 '23 09:50
+
+![Training Loss](assets/training_plot.png)
+
+### Training Metrics
+
+| Created          | Runtime | End Time          | Updated           | Accuracy | Epoch | F1-Score | Loss   | Precision | Recall |
+| ---------------- | ------- | ----------------- | ----------------- | -------- | ----- | -------- | ------ | --------- | ------ |
+| Dec 24 '23 09:50 | 36s     | Dec 24 '23 09:50 | Dec 24 '23 09:50 | 0.8      | 199   | 0.7991   | 0.04277 | 0.8087    | 0.8    |
+
+The plot above illustrates the training loss over epochs. The table presents key metrics achieved during the training process.
 
 ## Project Structure
 
