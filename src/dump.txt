@@ -1,0 +1,61 @@
+server.py
+import serial
+import socketio
+
+# Create a SocketIO server
+sio = socketio.Server()
+
+# Create a serial connection
+ser = serial.Serial("/dev/pts/9", 9600, timeout=1)
+
+# Define the SocketIO event handler
+@sio.event
+def message(sid, data):
+    try:
+        message = ser.readline().decode("utf-8").strip()
+        if message:
+            # Emit the received message to the client
+            sio.emit('message', message)
+    except serial.SerialException as e:
+        print(f"An error occurred: {e}")
+
+# Wrap the SocketIO application with the WSGI server
+app = socketio.WSGIApp(sio)
+
+if __name__ == '__main__':
+    # Run the SocketIO server on port 5000
+    socketio.WSGIApp(sio, app)
+    sio.connect('http://localhost:5000')
+    try:
+        while True:
+            # Continue reading and emitting messages
+            sio.sleep(1)
+    except KeyboardInterrupt:
+        pass
+    finally:
+        ser.close()
+
+client.py
+import socketio
+
+# Create a SocketIO client
+sio = socketio.Client()
+
+# Define the event handler for receiving messages
+@sio.on('message')
+def on_message(data):
+    print(f"Received message: {data}")
+
+if __name__ == '__main__':
+    # Connect to the SocketIO server
+    sio.connect('http://localhost:5000')
+
+    try:
+        while True:
+            # Do other tasks or simply wait for messages
+            pass
+    except KeyboardInterrupt:
+        pass
+    finally:
+        # Disconnect from the SocketIO server
+        sio.disconnect()
